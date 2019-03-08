@@ -1,9 +1,11 @@
 {
   "name": "project-template",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://virajrg007.github.io/composer",
   "dependencies": {
     "antd": "^3.15.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -14,6 +16,8 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "sass": "sass --watch src/scss/app.scss:src/css/app.css --style compressed"
